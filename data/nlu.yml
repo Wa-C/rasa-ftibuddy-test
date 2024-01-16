@@ -1,0 +1,131 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: emma_check_fitness
+  examples: |
+    - I am Emma. Check my fitness.
+    - My name is Emma, Check my fitness Level.
+    - Emma's fitness progress.
+    - Check my workout results.
+    - How am I doing with my health goals?
+    
+- intent: emma_stress_relief
+  examples: |
+    - I am Emma. Check my stress level.
+    - My name is Emma, Check my stress Level.
+    - Stress relief for Emma.
+    - Emma's mindfulness exercises.
+    - Help me relax, FitBuddy.
+    
+- intent: emma_find_healthy_options
+  examples: |
+    - I am Emma. find some healthy options for me.
+    - My name is Emma, find some healthy options for me.
+    - Healthy dining options for Emma.
+    - Suggest nutritious meals, FitBuddy.
+    - Where can I find healthy food, FitBuddy?
+
+- intent: emma_create_workout_plan
+  examples: |
+    - I am Emma. Create workout plan.
+    - My name is Emma, Create a workout plan for me.
+    - Emma's workout routine.
+    - Assist me with my workouts, FitBuddy.
+    - Create a personalized fitness plan for me.
+
+- intent: emma_general_inquiry
+  examples: |
+    - I am Emma. how are you fitbuddy?.
+    - My name is Emma, chatting with you.
+    - Chat with FitBuddy.
+    - Just saying hi, FitBuddy.
+    - How are you, FitBuddy?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

@@ -1,0 +1,54 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - emma_check_fitness
+  - emma_stress_relief
+  - emma_find_healthy_options
+  - emma_create_workout_plan
+  - emma_general_inquiry
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Hope I Could help you. See you later, Bye"
+
+  utter_iamabot:
+  - text: "Hi Im FitBuddy, your virtual health and fitness companion, designed to assist international students in maintaining a healthy lifestyle while studying abroad"
+  
+  utter_emma_stress_relief:
+  - text: "Feeling stressed, Emma? Take a deep breath. Here's a quick mindfulness exercise for you: [Mindfulness Exercise]."
+    
+  utter_emma_find_healthy_options:
+  - text:  "Hungry, Emma? Here are some local restaurants with healthy options: [Restaurant 1], [Restaurant 2], [Restaurant 3]."
+   
+  utter_emma_create_workout_plan:
+  - text: "Excited to help you, Emma! Let's create a personalized workout plan. What type of exercises do you enjoy?"
+  
+  utter_emma_general_inquiry:
+  - text: "Hey Emma! Just here to chat. What's on your mind?"
+
+actions:
+  - action_emma_check_fitness  
+    
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

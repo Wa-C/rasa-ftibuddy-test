@@ -1,0 +1,95 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Emma checks fitness progress
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_check_fitness
+  - action: action_emma_check_fitness  
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Emma checks fitness progress
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_check_fitness
+  - action: action_emma_check_fitness  
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_goodbye  
+
+
+- story: Emma seeks stress relief
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_stress_relief
+  - action: utter_emma_stress_relief
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye  
+
+
+- story: Emma looks for healthy dining options
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_find_healthy_options
+  - action: utter_emma_find_healthy_options
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye  
+
+
+- story: Emma creates a workout plan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_create_workout_plan
+  - action: utter_emma_create_workout_plan
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye   
+
+
+- story: Emma has a general inquiry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_general_inquiry
+  - action: utter_emma_general_inquiry
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye    
