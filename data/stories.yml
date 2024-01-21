@@ -29,7 +29,7 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: Emma checks fitness progress
+- story: Emma checks fitness progress 1
   steps:
   - intent: greet
   - action: utter_greet
@@ -39,7 +39,7 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: Emma checks fitness progress
+- story: Emma checks fitness progress 2
   steps:
   - intent: greet
   - action: utter_greet
@@ -48,10 +48,19 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
-  - action: utter_goodbye  
+  
+- story: Emma seeks stress relief 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_stress_relief
+  - action: utter_emma_stress_relief
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy 
 
-
-- story: Emma seeks stress relief
+  
+- story: Emma seeks stress relief 2
   steps:
   - intent: greet
   - action: utter_greet
@@ -59,10 +68,20 @@ stories:
   - action: utter_emma_stress_relief
   - action: utter_did_that_help
   - intent: deny
-  - action: utter_goodbye  
+  - action: utter_goodbye    
 
+- story: Emma looks for healthy dining options 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_find_healthy_options
+  - action: utter_emma_find_healthy_options
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  
 
-- story: Emma looks for healthy dining options
+- story: Emma looks for healthy dining options 2
   steps:
   - intent: greet
   - action: utter_greet
@@ -71,20 +90,43 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye  
+ 
 
-
-- story: Emma creates a workout plan
+- story: Emma creates a workout plan 1
   steps:
   - intent: greet
   - action: utter_greet
   - intent: emma_create_workout_plan
   - action: utter_emma_create_workout_plan
+  - action: action_emma_create_workout_plan
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+    
+
+
+- story: Emma creates a workout plan 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_create_workout_plan
+  - action: utter_emma_create_workout_plan
+  - action: action_emma_create_workout_plan
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye   
 
-
-- story: Emma has a general inquiry
+- story: Emma has a general inquiry 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: emma_general_inquiry
+  - action: utter_emma_general_inquiry
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  
+- story: Emma has a general inquiry 2
   steps:
   - intent: greet
   - action: utter_greet
@@ -93,3 +135,217 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye    
+
+- story: Raj checks fitness progress 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_check_fitness
+  - action: action_raj_check_fitness  
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Raj checks fitness progress 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_check_fitness
+  - action: action_raj_check_fitness  
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye  
+
+- story: Raj looks for healthy dining options 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_find_healthy_restaurants
+  - action: utter_raj_find_healthy_restaurants
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Raj looks for healthy dining options 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_find_healthy_restaurants
+  - action: utter_raj_find_healthy_restaurants
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye  
+
+- story: Raj creates a workout plan 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_create_workout_plan
+  - action: utter_raj_create_workout_plan
+  - action: action_raj_create_workout_plan
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy  
+
+
+- story: Raj creates a workout plan 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_create_workout_plan
+  - action: utter_raj_create_workout_plan
+  - action: action_raj_create_workout_plan
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye 
+
+
+- story: Raj looks for gyms near him 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_find_gyms_near_me
+  - action: utter_raj_find_gyms_near_me
+  - action: action_raj_find_gyms_near_me
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy 
+
+
+- story: Raj looks for gyms near him 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_find_gyms_near_me
+  - action: utter_raj_find_gyms_near_me
+  - action: action_raj_find_gyms_near_me
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye 
+
+- story: Raj has a general inquiry 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_general_inquiry
+  - action: utter_raj_general_inquiry
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy 
+
+- story: Raj has a general inquiry 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: raj_general_inquiry
+  - action: utter_raj_general_inquiry
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye    
+
+- story: Lina checks fitness progress 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_check_fitness
+  - action: action_lina_check_fitness  
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Lina checks fitness progress 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_check_fitness
+  - action: action_lina_check_fitness  
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye  
+
+- story: Lina creates a workout plan 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_create_workout_plan
+  - action: utter_lina_create_workout_plan
+  - action: action_lina_create_workout_plan
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy  
+
+
+- story: Lina creates a workout plan 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_create_workout_plan
+  - action: utter_lina_create_workout_plan
+  - action: action_lina_create_workout_plan
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye   
+
+- story: Lina seeks stress relief 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_stress_relief
+  - action: utter_lina_stress_relief
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy   
+
+- story: Lina seeks stress relief 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_stress_relief
+  - action: utter_lina_stress_relief
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye     
+
+- story: Lina looks for gyms near her 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_find_gyms_near_me
+  - action: utter_lina_find_gyms_near_me
+  - action: action_lina_find_gyms_near_me
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy 
+
+- story: Lina looks for gyms near her 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_find_gyms_near_me
+  - action: utter_lina_find_gyms_near_me
+  - action: action_lina_find_gyms_near_me
+  - action: utter_did_that_help
+  - intent: deny  
+  - action: utter_goodbye   
+
+
+- story: Lina has a general inquiry 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_general_inquiry
+  - action: utter_lina_general_inquiry
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy  
+
+
+- story: Lina has a general inquiry 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lina_general_inquiry
+  - action: utter_lina_general_inquiry
+  - action: utter_did_that_help
+  - intent: deny  
+  - action: utter_goodbye  

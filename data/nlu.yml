@@ -97,7 +97,7 @@ nlu:
     - My name is Emma, Check my stress Level.
     - Stress relief for Emma.
     - Emma's mindfulness exercises.
-    - Help me relax, FitBuddy.
+    - I'm Emma, Help me relax, FitBuddy.
     
 - intent: emma_find_healthy_options
   examples: |
@@ -122,6 +122,82 @@ nlu:
     - Chat with FitBuddy.
     - Just saying hi, FitBuddy.
     - How are you, FitBuddy?
+
+- intent: raj_check_fitness
+  examples: |
+    - Raj's fitness progress.
+    - Check my workout stats.
+    - How am I doing with my fitness goals?
+    - Im Raj. Check Fitness Progress.
+    - My name is Raj. Check my workout stats.
+
+- intent: raj_find_healthy_restaurants
+  examples: |
+    - Healthy dining for Raj.
+    - Suggest local spots with nutritious options, FitBuddy.
+    - Where can I find healthy restaurants, FitBuddy?
+    - Im Raj. Check restaurants.
+    - My name is Raj. Suggest loal spot with nutritious options.
+    
+- intent: raj_create_workout_plan
+  examples: |
+    - Raj's workout routine.
+    - Assist me in planning my workouts, FitBuddy.
+    - Create a fitness plan for me, FitBuddy
+    - Im Raj. Create a fitness plan for me, FitBuddy
+    - My name is Raj.Assist me in planning my workouts, FitBuddy.
+
+- intent: raj_find_gyms_near_me
+  examples: |
+    - Locate gyms nearby for Raj.
+    - Im Raj. Find fitness centers in my area, FitBuddy.
+    - Im Raj. Where can I find a gym, FitBuddy?
+    - My name is Raj.Locate gyms nearby.
+
+- intent: raj_general_inquiry
+  examples: |
+    - Raj, Tell me something interesting, FitBuddy..
+    - Im Raj. Tell me something interesting, FitBuddy.
+    - Im Raj. How's it going, FitBuddy?
+    - My name is Raj.Chat with FitBuddy.   
+
+- intent: lina_check_fitness
+  examples: |
+    - Lina's fitness progress.
+    - I'm Lina,Check my workout results, FitBuddy.
+    - I'm Lina, How am I doing with my fitness goals?
+    - Im Lina. Check Fitness Progress.
+    - My name is Lina. Check my workout stats.
+
+- intent: lina_create_workout_plan
+  examples: |
+    - Lina's workout routine.
+    - I'm Lina. Assist me in planning my workouts, FitBuddy.
+    - Create a fitness plan for Lina, FitBuddy
+    - Im Lina. Create a fitness plan for me, FitBuddy
+    - My name is Lina. Assist me in planning my workouts, FitBuddy.
+
+- intent: lina_stress_relief
+  examples: |
+    - I am Lina. Check my stress level.
+    - Stress relief for Lina.
+    - My name is Lina , Check my stress Level.
+    - Lina's mindfulness exercises.
+    - Im Lina, Help me relax, FitBuddy.
+
+- intent: lina_find_gyms_near_me
+  examples: |
+    - Locate gyms nearby for Lina.
+    - Im Lina. Find fitness centers in my area, FitBuddy.
+    - Im Lina. Where can I find a gym, FitBuddy?
+    - My name is Lina.Locate gyms nearby.
+
+- intent: lina_general_inquiry
+  examples: |
+    - Lina, Tell me something interesting, FitBuddy.
+    - Im Lina. Tell me something interesting, FitBuddy.
+    - Im Lina. How's it going, FitBuddy?
+    - My name is Lina. Chat with FitBuddy.
 
 - intent: bot_challenge
   examples: |

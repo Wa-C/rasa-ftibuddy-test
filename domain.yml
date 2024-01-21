@@ -13,10 +13,20 @@ intents:
   - emma_find_healthy_options
   - emma_create_workout_plan
   - emma_general_inquiry
+  - raj_check_fitness
+  - raj_find_healthy_restaurants
+  - raj_create_workout_plan
+  - raj_find_gyms_near_me
+  - raj_general_inquiry
+  - lina_check_fitness
+  - lina_create_workout_plan
+  - lina_stress_relief
+  - lina_find_gyms_near_me
+  - lina_general_inquiry
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! My Name is FitBuddy, I am your personal fitness information assistant. Write your name (Emma, Raj, Lina) and ask your question?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -35,19 +45,50 @@ responses:
   - text: "Hi Im FitBuddy, your virtual health and fitness companion, designed to assist international students in maintaining a healthy lifestyle while studying abroad"
   
   utter_emma_stress_relief:
-  - text: "Feeling stressed, Emma? Take a deep breath. Here's a quick mindfulness exercise for you: [Mindfulness Exercise]."
+  - text: "Feeling stressed, Emma? Take a deep breath. Here's a quick mindfulness exercise for you: Yoga, Jogging."
     
   utter_emma_find_healthy_options:
-  - text:  "Hungry, Emma? Here are some local restaurants with healthy options: [Restaurant 1], [Restaurant 2], [Restaurant 3]."
+  - text:  "Hungry, Emma? Here are some local restaurants with healthy options: Eat Healthy, Well Food."
    
   utter_emma_create_workout_plan:
-  - text: "Excited to help you, Emma! Let's create a personalized workout plan. What type of exercises do you enjoy?"
+  - text: "Excited to help you, Emma! Let's create a personalized workout plan."
   
   utter_emma_general_inquiry:
   - text: "Hey Emma! Just here to chat. What's on your mind?"
 
+  utter_raj_find_healthy_restaurants:
+  - text:  "Healthy dining, Raj! Consider trying these restaurants: Eat Healthy, Well Food."
+ 
+  utter_raj_create_workout_plan: 
+  - text: "Excited to help you, Raj! Let's create a personalized workout plan"
+
+  utter_raj_find_gyms_near_me:
+  - text: "Raj, let's locate some gyms for you. Hold on while I fetch the information."
+  
+  utter_raj_general_inquiry:
+  - text: "Hello Raj! How can I assist you today?"
+
+  utter_lina_create_workout_plan:
+  - text: "Absolutely, Lina! Creating a workout plan tailored to your preferences."
+
+  utter_lina_stress_relief:
+  - text: "Feeling stressed, Lina? Take a deep breath. Here's a quick mindfulness exercise for you: Yoga, Jogging."
+
+  utter_lina_find_gyms_near_me:
+  - text: "Lina, let's locate some gyms for you. Hold on while I fetch the information."
+
+  utter_lina_general_inquiry:
+  - text: "Hello Lina! How can I assist you today?"
+
 actions:
-  - action_emma_check_fitness  
+  - action_emma_check_fitness 
+  - action_raj_check_fitness 
+  - action_lina_check_fitness
+  - action_emma_create_workout_plan
+  - action_lina_create_workout_plan
+  - action_raj_create_workout_plan
+  - action_raj_find_gyms_near_me
+  - action_lina_find_gyms_near_me
     
 session_config:
   session_expiration_time: 60
