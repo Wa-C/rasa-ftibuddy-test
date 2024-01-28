@@ -10,7 +10,7 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-
+import csv
 
 class ActionEmmaCheckFitness(Action):
      def name(self) -> Text:
@@ -123,3 +123,82 @@ class ActionLinaFindGymsNearMe(Action):
          dispatcher.utter_message(text="How about this one? FitBuddy Gym. 700 meter from your loaction ")
         
          return []      
+     
+class ActionEmmaGeneralInquery(Action):
+     def name(self) -> Text:
+         return "action_emma_general_inquiry"
+
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = tracker.get_slot("emma_general_inquiry")
+         
+        try:
+            with open(r'C:\Users\wassi\OneDrive\Desktop\Winter Semester 23-24\Assistance System\WS23\Health_Fitness_Bot_for_International_students\y\actions\data.csv', 'r') as file: 
+                reader = csv.DictReader(file)
+                for row in reader:
+                    if row ["name"] == name:
+                        response_message = f"Found {name} about: {row['about']}"
+                        dispatcher.utter_message(text=response_message)
+                        return []
+        except Exception as e: 
+            print(f"Error: {e}")     
+
+         
+            dispatcher.utter_message(text=f"sorry couldnt found information in Database for {name}")
+         
+
+            return []     
+class ActionRajGeneralInquery(Action):
+     def name(self) -> Text:
+         return "action_raj_general_inquiry"
+
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = tracker.get_slot("raj_general_inquiry")
+         
+        try:
+            with open(r'C:\Users\wassi\OneDrive\Desktop\Winter Semester 23-24\Assistance System\WS23\Health_Fitness_Bot_for_International_students\y\actions\data.csv', 'r') as file: 
+                reader = csv.DictReader(file)
+                for row in reader:
+                    if row ["name"] == name:
+                        response_message = f"Found {name} about: {row['about']}"
+                        dispatcher.utter_message(text=response_message)
+                        return []
+        except Exception as e: 
+            print(f"Error: {e}")     
+
+         
+            dispatcher.utter_message(text=f"sorry couldnt found information in Database for {name}")
+         
+
+            return []         
+class ActionLinaGeneralInquery(Action):
+     def name(self) -> Text:
+         return "action_lina_general_inquiry"
+
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = tracker.get_slot("lina_general_inquiry")
+         
+        try:
+            with open(r'C:\Users\wassi\OneDrive\Desktop\Winter Semester 23-24\Assistance System\WS23\Health_Fitness_Bot_for_International_students\y\actions\data.csv', 'r') as file: 
+                reader = csv.DictReader(file)
+                for row in reader:
+                    if row ["name"] == name:
+                        response_message = f"Found {name} about: {row['about']}"
+                        dispatcher.utter_message(text=response_message)
+                        return []
+        except Exception as e: 
+            print(f"Error: {e}")     
+
+         
+            dispatcher.utter_message(text=f"sorry couldnt found information in Database for {name}")
+         
+
+            return []         

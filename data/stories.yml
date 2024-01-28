@@ -121,20 +121,16 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: emma_general_inquiry
-  - action: utter_emma_general_inquiry
+    entities:
+    - interestings: interesting
+    - weathers: weather
+  - slot_was_set:
+    - emma_general_inquiry: interesting
+  - action: action_emma_general_inquiry  
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
-  
-- story: Emma has a general inquiry 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: emma_general_inquiry
-  - action: utter_emma_general_inquiry
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye    
+    
 
 - story: Raj checks fitness progress 1
   steps:
@@ -223,32 +219,34 @@ stories:
   - intent: deny
   - action: utter_goodbye 
 
+
 - story: Raj has a general inquiry 1
   steps:
   - intent: greet
   - action: utter_greet
   - intent: raj_general_inquiry
-  - action: utter_raj_general_inquiry
+    entities:
+    - interestings: interesting
+    - weathers: weather
+  - slot_was_set:
+    - raj_general_inquiry: interesting
+  - action: action_raj_general_inquiry  
   - action: utter_did_that_help
   - intent: affirm
-  - action: utter_happy 
+  - action: utter_happy  
+  
 
-- story: Raj has a general inquiry 2
+- story: Lina has a general inquiry 1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: raj_general_inquiry
-  - action: utter_raj_general_inquiry
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye    
-
-- story: Lina checks fitness progress 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: lina_check_fitness
-  - action: action_lina_check_fitness  
+  - intent: lina_general_inquiry
+    entities:
+    - interestings: interesting
+    - weathers: weather
+  - slot_was_set:
+    - lina_general_inquiry: interesting
+  - action: action_lina_general_inquiry  
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -329,23 +327,11 @@ stories:
   - action: utter_goodbye   
 
 
-- story: Lina has a general inquiry 1
+
+- story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: lina_general_inquiry
-  - action: utter_lina_general_inquiry
+  - intent: emma_general_inquiry
+  - action: action_emma_general_inquiry
   - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy  
-
-
-- story: Lina has a general inquiry 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: lina_general_inquiry
-  - action: utter_lina_general_inquiry
-  - action: utter_did_that_help
-  - intent: deny  
-  - action: utter_goodbye  
